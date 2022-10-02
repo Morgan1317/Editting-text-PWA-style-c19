@@ -23,6 +23,7 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
       new WebpackPwaManifest({
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Edit text',
@@ -32,7 +33,8 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join("assets", "icons") 
           },
         ]
       }), 
