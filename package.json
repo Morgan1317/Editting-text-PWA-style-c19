@@ -2,7 +2,7 @@
   "name": "editting-text-pwa-style-c19",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "main":"server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "cd server && node server.js",
