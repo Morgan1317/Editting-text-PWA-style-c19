@@ -2,10 +2,10 @@
   "name": "editting-text-pwa-style-c19",
   "version": "1.0.0",
   "description": "",
-  "main":"index.js",
+  "main":"server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "cd server && node server.js",
+    "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "concurrently \"cd client && npm install\" \"cd server && npm install\"",
