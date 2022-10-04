@@ -12,9 +12,9 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      // database: './src/js/database.js',
-      // editor: './src/js/editor.js',
-      // header: './src/js/header.js',
+      database: './src/js/database.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -23,29 +23,29 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin',
+        title: 'JATE',
       }),
       new WebpackPwaManifest({
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Edit text',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
-        start_url: './',
-        publicPath: './',
+        background_color: '#000000',
+        theme_color: '#000000',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96],
-            destination: path.join('assets', 'icons') 
+            destination: path.join('assets') 
           },
         ]
       }), 
       
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }), 
     ],
 
