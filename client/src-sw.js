@@ -26,7 +26,7 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// Implement asset caching
+// Implement asset caching so a copy of the service worker, style, and script are saved to users local device 
 registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination), 
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',

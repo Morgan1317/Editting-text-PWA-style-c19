@@ -20,7 +20,7 @@ butInstall.addEventListener('click', async () => {
     promptEvent.prompt();
 
     window.deferredPrompt = null;
-    // Hide the install button.
+    
     butInstall.classList.toggle('hidden', true);
   });
 
